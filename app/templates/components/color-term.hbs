@@ -1,0 +1,15 @@
+<div>
+  {{input value=hexColor class="Term-colorInput"}}
+  {{# if showAlpha }}
+    {{input value=alpha class="Term-alphaInput"}}
+  {{/if}}
+</div>
+<div>
+  <div class="Term-colorRect">
+    <div class="Term-color" style="background-color: {{color}};"></div>
+    {{input value=hexColor class="Term-colorPicker" type="color"}}
+  </div>
+  {{# if showAlpha }}
+    {{input value=alpha class="Term-alpha" min="0" max="100" type="range" orient="vertical"}}
+  {{/if}}
+</div>

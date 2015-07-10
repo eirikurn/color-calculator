@@ -1,0 +1,66 @@
+@colorWidth: 140px;
+@alphaWidth: 28px;
+@checkerSize: 16px;
+
+.Term {
+  display: inline-block;
+}
+
+.Term-colorInput,
+.Term-alphaInput {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  color: #999;
+  margin-bottom: 5px;
+  padding: 0;
+}
+
+.Term-colorInput {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  width: @colorWidth;
+}
+
+.Term-alphaInput {
+  font-size: 14px;
+  text-align: center;
+  width: @alphaWidth;
+}
+
+.Term-colorRect {
+  background-image: linear-gradient(45deg, #CBCBCB 25%, transparent 25%, transparent 75%, #CBCBCB 75%, #CBCBCB), linear-gradient(45deg, #CBCBCB 25%, transparent 25%, transparent 75%, #CBCBCB 75%, #CBCBCB);
+  background-size: @checkerSize @checkerSize;
+  background-position: 0 0, (@checkerSize / 2) (@checkerSize / 2);
+  display: inline-block;
+  height: @colorWidth;
+  position: relative;
+  vertical-align: top;
+  width: @colorWidth;
+}
+
+.Term-color,
+.Term-colorPicker {
+  bottom: 0;
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.Term-colorPicker {
+  opacity: 0;
+}
+
+.Term-alpha {
+  box-sizing: border-box;
+  height: @colorWidth;
+  margin: 0;
+  width: @alphaWidth;
+  // Vertical slider
+  -webkit-appearance: slider-vertical; // Webkit
+  writing-mode: bt-lr; // IE
+}
