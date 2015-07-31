@@ -37,7 +37,6 @@ export default Ember.Component.extend({
 
   actions: {
     change: function() {
-      console.log('wtf');
       this.sendAction('action', this.get('cssColor'));
     }
   }

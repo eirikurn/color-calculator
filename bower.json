@@ -11,6 +11,7 @@
     "jquery": "^1.11.1",
     "loader.js": "ember-cli/loader.js#3.2.0",
     "qunit": "~1.17.1",
-    "tinycolor": "~1.1.2"
+    "tinycolor": "~1.1.2",
+    "ryb-color-mixer": "camme/ryb-color-mixer#8d7783f6488e276d063b41473c157deffade088e"
   }
 }
