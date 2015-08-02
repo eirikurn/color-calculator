@@ -3,7 +3,8 @@ export default Ember.Route.extend({
     return {
       left: '#ffffff',
       right: 'rgba(0, 0, 0, 0.2)',
-      result: '#000000'
+      result: '#000000',
+      blending: 'normal'
     };
   }
 });

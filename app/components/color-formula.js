@@ -1,5 +1,6 @@
 export default Ember.Component.extend({
   classNames: ['Formula'],
+  blender: Ember.inject.service(),
 
   actions: {
     changeLeft: function() {
@@ -14,11 +15,12 @@ export default Ember.Component.extend({
   },
 
   calculateResult: function() {
-    let left = tinycolor(this.get('left'));
-    let right = tinycolor(this.get('right'));
-    let alpha = right.getAlpha();
-    right.setAlpha(1);
-    let result = tinycolor.mix(left, right, alpha * 100);
+    var blender = this.get('blender');
+    let result = blender.blend(
+      this.get('left'),
+      this.get('right'),
+      this.get('blending')
+    );
     this.set('result', result);
   },
 
