@@ -13,7 +13,7 @@ export default Ember.Service.extend({
       b: func(color1.b, color2.b)
     };
 
-    // Composite
+    // Compositey
     let alpha = color2.a;
     return tinycolor.fromRatio({
       r: color1.r + (result.r - color1.r) * alpha,
