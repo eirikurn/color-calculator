@@ -1,0 +1,9 @@
+<span {{action 'open'}} class="Mode-active">
+  {{currentMode.name}}
+  <i class="Mode-arrow"></i>
+</span>
+<ul class="Mode-dropdown{{if isOpen ' is-open'}} {{positionModifier}}">
+  {{#each modes as |mode|}}
+    <li {{action 'switchTo' mode}} class="Mode-item {{if mode.isActive 'is-active'}}">{{mode.name}}</li>
+  {{/each}}
+</ul>
